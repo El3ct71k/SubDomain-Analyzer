@@ -323,7 +323,7 @@ if __name__ == '__main__':
                         action='store_true',
                         help="Append new sub-domains to sub-domains list")
     parser.add_argument("-l", "--sub-domain-list",
-                        default="sub_domains.txt",
+                        default="subdomains.txt",
                         help="Sub domains list")
     sys_args = vars(parser.parse_args())
     domain = sys_args.pop('domain')
