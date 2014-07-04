@@ -3,6 +3,7 @@ SubDomain Analyzer
 
 The Subdomain Analyzer is tool written on Python language to try to get full details about domains.
 The Subdomain Analyzer gets a data from domain by following steps:
+
 1. Trying to Analyzer the `zone tranfer` file
 2. Gathers all informations from DNS Records
 3. Analyzing the DNS Records (Analyzing all the IP addresses from DNS records and test all the range from IP address(For example: 127.0.0.1/24) and gets all the data that containing the domain being analyzed)
