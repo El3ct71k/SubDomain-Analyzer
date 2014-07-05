@@ -14,17 +14,12 @@ The Subdomain Analyzer can brings a very qualitative information about the domai
 additionally, he shows a designed report with all the data
 
 #####Examples:
-Analyze the example.com domain:
-
-subdomain-analyzer.py example.com
-
-analyze the example.com domain, save the records on `log.txt` file with 100 threads and use by another dictionary file:
-
-subdomain-analyzer.py example.com --output log.txt --threads 100 --sub-domain-list another-file.txt
-
-analyze the example.com domain, save the records on `log.txt` and append new sub-domains to sub-domainslist:
-
-subdomain-analyzer.py example.com --output log.txt --sub-domain-list
+* Analyze the example.com domain:
+`subdomain-analyzer.py example.com`
+* analyze the example.com domain, save the records on `log.txt` file with 100 threads and use by another dictionary file:
+`subdomain-analyzer.py example.com --output log.txt --threads 100 --sub-domain-list another-file.txt`
+* analyze the example.com domain, save the records on `log.txt` and append new sub-domains to sub-domainslist:
+`subdomain-analyzer.py example.com --output log.txt --sub-domain-list`
 
 Requirements:
 ===============
