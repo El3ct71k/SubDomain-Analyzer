@@ -166,11 +166,9 @@ class SubDomainAnalyzer(object):
                     return True
                 except socket.error:
                     pass
-        except (FormError, dns.resolver.NoAnswer, EOFError):
+        except (FormError, dns.resolver.NoAnswer, dns.exception.Timeout, EOFError):
             pass
         except Exception as e:
-            print type(e), url
-            exit(-1)
             logger.error('[DNS][Error] %s' % e.message)
         return False
 
