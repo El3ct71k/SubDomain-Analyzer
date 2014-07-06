@@ -1,30 +1,26 @@
 SubDomain Analyzer
 ==================
 
-The Subdomain Analyzer is tool written on Python language to try to get full details about domains.
-The Subdomain Analyzer gets a data from domain by following steps:
+The "SubDomain Analyzer" tool written in Python language.
+The purpose of "SubDomain Analyzer" getting full detailed information of selected domain.
+The "SubDomain Analyzer" gets data from domain by following steps:
 
-1. Trying to Analyzer the `zone tranfer` file
-2. Gathers all informations from DNS Records
-3. Analyzing the DNS Records (Analyzing all the IP addresses from DNS records and test all the range from IP address(For example: 127.0.0.1/24) and gets all the data that containing the domain being analyzed)
-4. tests subdomains by dictionary attack
+1. Trying to get the `zone tranfer` file.
+2. Gathers all information from DNS records.
+3. Analyzing the DNS records (Analyzing all IP's addresses from DNS records and test class C range from IP address (For example: 127.0.0.1/24) and getting all data that containing the domain being analyzed).
+4. Tests subdomains by dictionary attack.
 
-The Subdomain Analyzer can keep new addresses which found on DNS records or  IP Analyzer
+The Subdomain Analyzer can keep new addresses which found on DNS records or IP's analyzer.
 The Subdomain Analyzer can brings a very qualitative information about the domain being analyzed,
-additionally, he shows a designed report with all the data
+additionally, he shows a designed report with all the data.
 
 #####Examples:
-Analyze the example.com domain:
-
-subdomain-analyzer.py example.com
-
-analyze the example.com domain, save the records on `log.txt` file with 100 threads and use by another dictionary file:
-
-subdomain-analyzer.py example.com --output log.txt --threads 100 --sub-domain-list another-file.txt
-
-analyze the example.com domain, save the records on `log.txt` and append new sub-domains to sub-domainslist:
-
-subdomain-analyzer.py example.com --output log.txt --sub-domain-list
+* Analyzing `example.com` domain:
+`subdomain-analyzer.py example.com`
+* Analyzing `example.com` domain, save the records on log file by name `log.txt`, works with 100 threads and use by another dictionary file by name `another-file.txt`:
+`subdomain-analyzer.py example.com --output log.txt --threads 100 --sub-domain-list another-file.txt`
+* Analyzing `example.com` domain, save the records on log file by name `log.txt` and append a new sub-domains to sub-domains list file:
+`subdomain-analyzer.py example.com -o log.txt --sub-domain-list`
 
 Requirements:
 ===============

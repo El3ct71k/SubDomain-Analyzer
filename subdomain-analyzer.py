@@ -133,6 +133,8 @@ class SubDomainAnalyzer(object):
             If have a new subdomain on potential list which dont exists on `subdomains` file, he append him to the `subdomains` file
         '''
         with open(self.sub_domain_file_name, 'a') as sub_domain_file:
+            sub_domain_file.write("\n")
+            sub_domain_file.flush()
             for new_sub_domain in POTENTIAL_SUBDOMAINS:
                 if new_sub_domain not in self.sub_domain_list:
                     self.logger.info("adding '%s' to sub domains list" % new_sub_domain)
@@ -297,7 +299,7 @@ class SubDomainAnalyzer(object):
             self.logger.info("[DNS][Error] Request timed out or transfer not allowed.")
             self.dns_data()
             self.async_domain_analyzer()
-            if POTENTIAL_SUBDOMAINS: # Check if have a subdomains from IP analyzer or DNS records
+            if POTENTIAL_SUBDOMAINS and self.append_sub_domains: # Check if have a subdomains from IP analyzer or DNS records
                 self.__add_new_sub_domains()
         self.logger.info('[Domain Analyzer] Finished!')
         if REPORT_DETAILS:
