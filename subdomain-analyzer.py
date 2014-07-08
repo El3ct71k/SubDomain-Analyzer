@@ -235,7 +235,7 @@ class SubDomainAnalyzer(object):
                 if self.__is_public(ip) and oct_ip not in OCT_LIST: # Checks if the ip is a public address, and the IP will not exists on the `OCTLIST` variable,
                     self.async_ip_analyzer(ip)
             self.logger.info("[Domain Analyzer] %s exists" % domain)
-        except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, Timeout, TypeError):
+        except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, dns.resolver.NoNameservers, Timeout, TypeError):
             pass
         except Exception as e:
             self.logger.exception("[Domain Analyzer][Error] %s" % e.message)
